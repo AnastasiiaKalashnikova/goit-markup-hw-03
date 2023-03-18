@@ -21,6 +21,25 @@ body {
     font-size: 16px;
 }
 
+h1, h2, h3, h4, h5 {
+margin-top: 0;
+margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    margin: 0;
+}
+
 /* ЗАГАЛЬНІ */
 
 .list {
@@ -30,6 +49,22 @@ body {
 .link {
 text-decoration-line: none;
 }
+
+.subtitle {
+        color: var(--dark);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
+.container {
+    width: 1158px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 
 /* ЛОГО */
 .logo {
@@ -51,11 +86,31 @@ text-decoration-line: none;
     color: var(--dark);
 }
 
+header > .container {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
 .menu-list {
+    display: flex;
+    margin-left: 76px;
+
     font-weight: 500;
     line-height: 1.5;
     text-decoration-line: none;
 }
+
+.menu-list .item:not(:last-child) {
+    margin-right: 40px;
+}
+
 
 .menu-item {
     color: var(--dark);
@@ -69,6 +124,16 @@ text-decoration-line: none;
 
 .contact {
     font-style: normal;
+    margin-left: auto;
+}
+
+.contact-list {
+    display: flex;
+
+}
+
+.contact-list .item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .contact-item {
@@ -94,17 +159,27 @@ text-decoration-line: none;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
+
+    width: 496px;
 }
 
-.advantages-subtitle,
-.team-subtitle,
-.example-title {
-    color: var(--dark);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    }
+.advantages .container {
+    padding-top: 120px;
+    padding-bottom: 129px;
+}
+
+.advantades-list {
+    display: flex;
+}
+
+.advantages-item {
+    width: 264px;
+}
+
+.advantages-item:not(:last-child) {
+    margin-right: 24px;
+}
+
 
 .section-title {
     font-weight: 500;
@@ -114,12 +189,23 @@ text-decoration-line: none;
 }
 
 .description {
+margin-top: 8px;
+
     line-height: 1.5;
     color: var(--text);
 }
 
 .team {
     background: var(--light);
+}
+
+.servis .container {
+    padding-bottom: 120px;
+}
+
+.servis-list {
+    display: flex;
+    margin-top: 72px;
 }
 
 .servis-title,
@@ -132,18 +218,91 @@ text-decoration-line: none;
     text-transform: capitalize;
 }
 
+.servis-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.team .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.team-list {
+    display: flex;
+    margin-top: 72px;
+}
+
+.team-subtitle {
+    margin-top: 32px;
+
+    text-align: center;
+}
+
 .team-member {
     background: var(--basik-white);
+    padding-bottom: 32px;
+
+    text-align: center;
+}
+
+.team-member:not(:last-child) {
+    margin-right: 24px;
 }
 
 .footer {
     background: var(--dark);
-}
-.slogan {
-    color: var(--light);;
-    line-height: 1.5
+
 }
 
+.footer .container {
+    padding-top: 101px;
+    padding-bottom: 100px;
+}
+
+.slogan {
+    width: 264px;
+    margin-top: 18px;
+
+    color: var(--light);
+    line-height: 1.5;
+}
+
+.portfolio .container {
+   padding-top: 96px;
+   padding-bottom: 120px; 
+}
+
+.button-filter {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.button-filter .button-item:not(:last-child){
+    margin-right: 24px;
+}
+
+.example-title {
+
+}
+
+.examples-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 72px;
+    row-gap: 48px;
+    column-gap: 24px;
+    flex-basis: calc((100%-48px)/3);
+}
+
+
+.example .text {
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border: 1px solid #E7E9FC;
+}
 
 /* КНОПКИ */
 .hero-button {
@@ -155,11 +314,14 @@ text-decoration-line: none;
     font-family: Roboto, sans-serif;
     color: var(--basik-white);
     background: var(--primary-brand);
+    padding: 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    color: var(--pressed-state);
+    background: var(--pressed-state);
 }
 
 .button {
@@ -171,6 +333,9 @@ text-decoration-line: none;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
 }
 
 .button:hover,
