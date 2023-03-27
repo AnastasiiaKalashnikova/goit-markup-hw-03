@@ -57,7 +57,8 @@ text-decoration-line: none;
 
 .container {
     width: 1158px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -91,11 +92,14 @@ header {
     color: var(--dark);
 }
 
-header > .container {
-    display: flex;
-    align-items: center;
+.header {
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.header>.container {
+    display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -155,7 +159,8 @@ header > .container {
 .hero {
     background: var(--dark);
     text-align: center;
-
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -169,12 +174,8 @@ header > .container {
     width: 496px;
 }
 
-.hero .container {
-    padding-top: 188px;
-    padding-bottom: 188px;
-}
 
-.advantages .container {
+.advantages {
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -210,7 +211,7 @@ margin-top: 8px;
     background: var(--light);
 }
 
-.servis .container {
+.servis {
     padding-bottom: 120px;
 }
 
@@ -233,7 +234,7 @@ margin-top: 8px;
     margin-right: 24px;
 }
 
-.team .container {
+.team {
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -243,16 +244,9 @@ margin-top: 8px;
     margin-top: 72px;
 }
 
-.team-subtitle {
-    margin-top: 32px;
-
-    text-align: center;
-}
 
 .team-member {
     background: var(--basik-white);
-    padding-bottom: 32px;
-
     text-align: center;
 }
 
@@ -260,32 +254,36 @@ margin-top: 8px;
     margin-right: 24px;
 }
 
+.team-wrap {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 .footer {
     background: var(--dark);
+    padding-top: 101px;
+    padding-bottom: 100px;
 
 }
 
-.footer .container {
-    padding-top: 101px;
-    padding-bottom: 100px;
+.footer-content {
+    width: 264px;
 }
 
 .slogan {
-    width: 264px;
     margin-top: 18px;
 
     color: var(--light);
     line-height: 1.5;
 }
 
-.portfolio .container {
+.portfolio {
    padding-top: 96px;
    padding-bottom: 120px; 
 }
 
 .button-filter {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     
 }
@@ -317,6 +315,7 @@ margin-top: 8px;
     padding-top: 32px;
     padding-bottom: 32px;
     border: 1px solid #E7E9FC;
+    border-top: none;
 }
 
 /* КНОПКИ */
@@ -330,6 +329,7 @@ margin-top: 8px;
     color: var(--basik-white);
     background: var(--primary-brand);
     padding: 16px 32px;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin-top: 48px;
@@ -349,7 +349,7 @@ margin-top: 8px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-
+    padding: 12px 24px;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
 }
